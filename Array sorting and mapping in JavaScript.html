@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript </title>
+
+</head>
+
+<body>
+
+    <h2>js array</h2>
+    <p>click the button to sort  the array in accending order</p>
+    <button onclick="ascending()">ascending order</button>
+        <button onclick="decending()">decending order</button>
+        <p id="result"></p>
+        <p id="product_value"></p>
+            <button onclick="myfunction2()">try it</button>
+                <p id="result2"></p>
+
+    <script>
+var points = [40,100,1,5,25,10];
+document.getElementById('result').innerHTML=points;
+function ascending() {
+    points.sort(function (a,b){return a-b });
+    document.getElementById("result").innerHTML=points;
+}
+    function decending() {
+        points.sort(function (a, b) { return b-a });
+        document.getElementById("result").innerHTML = points;
+    }
+    document.write("</br>");
+    var numbers =[28,6,19,95];
+    function myfunction(num){
+        return num*10;
+    }
+    var newarray=numbers.map(myfunction);
+    document.getElementById("product_value").innerHTML=newarray;
+    function myfunction2(){
+        var x=10;
+        var y=20;
+        var a=eval("x+y")+"<br>";
+        var b = eval("2*2") + "<br>";
+        var c = eval("y-x") + "<br>";
+    }
+    var res = a + b + c;
+    document.getElementById("result2").innerHTML=res;
+
+
+    </script>
+
+</body>
+
+</html>
